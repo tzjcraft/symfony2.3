@@ -1,0 +1,7 @@
+acme_study_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: AcmeStudyBundle:Default:index }
+    
+random:
+    path:       /random/{limit}
+    defaults:  { _controller: AcmeStudyBundle:Random:index }
