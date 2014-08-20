@@ -7,7 +7,10 @@ use Symfony\Component\HttpFoundation\Response;
 class RandomController extends Controller {
     public function indexAction($limit)
     {
-        return new Response('<html><body>Number: ' . rand(1, $limit) . '</body></html>');
+        $number = rand(1, $limit);
+
+//        return new Response('<html><body>Number: ' . rand(1, $limit) . '</body></html>');
+        return $this->render('AcmeStudyBundle:Random:index.html.twig', array('number' => $number));
     }
 
 }
